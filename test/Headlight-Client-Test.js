@@ -72,5 +72,58 @@ suite
                 });
 			}
 		);
+
+        test
+		(
+			'should be able to upload media to remote server',
+			function(fComplete)
+			{
+                var tmpFileStream = fs.createReadStream(__dirname + '/sample.jpeg');
+
+				_HeadlightClient.uploadFile('Sample_1', 'image/jpeg', tmpFileStream, function(pError, pResponse)
+                {
+                    if (!pError)
+                    {
+                        Expect(pResponse.statusCode).to.equal(200, 'File upload HTTP error!');
+                    }
+
+                    return fComplete(pError);
+                });
+			}
+		);
+
+        test
+		(
+			'should be able to download media from remote server',
+			function(fComplete)
+			{
+				_HeadlightClient.downloadFile('Sample_1', function(pError, pFileInfo, pFileStream)
+                {
+                    if (!pError)
+                    {
+                        Expect(pFileInfo.contentType).to.equal('image/jpeg', 'File download type does not match what was uploaded!');
+                    }
+
+                    return fComplete(pError);
+                });
+			}
+		);
+
+        test
+		(
+			'should be able to check if any files exist matching search criteria on remote server',
+			function(fComplete)
+			{
+				_HeadlightClient.checkIfFileExists('Sample_1', function(pError, pExists)
+                {
+                    if (!pError)
+                    {
+                        Expect(pExists).to.equal(true, 'File should exist!');
+                    }
+
+                    return fComplete(pError);
+                });
+			}
+		);
     }
 );

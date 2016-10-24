@@ -21,6 +21,7 @@ var HeadlightClient = function()
         var libUUID = require('fable-uuid');
         var libStream = require('stream');
         var libRequest = require('request');
+        var libEntities = require(__dirname + '/Headlight-Entities').new(pFable);
 
         var _ServerURL = (pServerURL || _Settings.Headlight.ServerURL) + '/1.0/';
         var _Username = pUsername || _Settings.Headlight.Username;
@@ -230,10 +231,10 @@ var HeadlightClient = function()
         var checkIfFileExists = function(pFileName, fCallback)
         {
             // Check if the file is already there
-            getHeadlight('Media/Count/' + pFileName, function(err, pResponse)
+            get('Media/Count/' + pFileName, function(err, pResponse)
             {
                 if (err)
-                    return fCallback(err)
+                    return fCallback(err);
                 else
                     return fCallback(null, pResponse.body.Count > 0);
             });
@@ -304,6 +305,7 @@ var HeadlightClient = function()
 			checkIfFileExists: checkIfFileExists,
 			//findFilesInGrid: findFilesInGrid,
 			//deleteFileInGrid: deleteFileInGrid,
+            Entities: libEntities,
 			new: createNew
 		});
 

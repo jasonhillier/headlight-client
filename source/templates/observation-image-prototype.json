@@ -1,0 +1,33 @@
+{
+    "IDObservation": 0,
+    "Name": "Image: ",
+    "Description": "",
+    "DesignatedTime": "2016-10-05T19:54:23.000Z",
+    "ObservationType": "Legacy Image",
+    "CaptureLatitude": "0",
+    "CaptureLongitude": "0",
+    "UserLatitude": "0.00000000",
+    "UserLongitude": "0.00000000",
+    "AlignmentStation": "0",
+    "AlignmentOffset": "0",
+    "IDProject": 1,
+    "Priority": "0",
+    "Tags": [],
+    "Contractors": [],
+    "BidItems": [],
+    "Version": 1,
+    "SpritePage": 0,
+    "AppHash": "",
+    "Locked": 0,
+    "Details": {
+        "Image": [
+            {
+                "IDArtifact": 0,
+                "ArtifactType": "Image",
+                "Datum": {},
+                "Version": 1
+            }
+        ],
+        "Annotation": []
+    }
+}
