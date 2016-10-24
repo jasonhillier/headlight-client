@@ -73,6 +73,28 @@ suite
 			}
 		);
 
+		test
+		(
+			'should be able to create an Observation',
+			function(fComplete)
+			{
+				var tmpObservation = _HeadlightClient.Entities.createFromPrototype('Observation-Image');
+				tmpObservation.DesignatedTime = new Date();
+				tmpObservation.Name = 'New Test Image Observation';
+				tmpObservation.IDProject = 1;
+
+				_HeadlightClient.post('Observation', tmpObservation, function(pError, pResponse)
+				{
+                    if (!pError)
+                    {
+                        Expect(pResponse.body).to.have.property('IDObservation');
+                    }
+
+                    return fComplete(pError);
+                });
+			}
+		);
+
         test
 		(
 			'should be able to upload media to remote server',
