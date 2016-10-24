@@ -257,7 +257,7 @@ var HeadlightClient = function()
                 login(function(err, response)
                 {
                     if (err)
-                        _Log.error("Failed to login to Headlight!");
+                        return fCallback("Failed to login to Headlight!");
 
                     return fRetry();
                 });
