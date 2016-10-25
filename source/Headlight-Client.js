@@ -101,7 +101,7 @@ var HeadlightClient = function()
          */
         var getFileExtended = function(pUrl, pOptions, fCallback)
         {
-            var tmpBufferFile = libUtil.generateBufferFileName();
+            var tmpBufferFile = generateBufferFileName();
             var tmpErr;
             var tmpResponse;
 
