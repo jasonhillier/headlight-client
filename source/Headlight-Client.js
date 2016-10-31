@@ -114,13 +114,18 @@ var HeadlightClient = function()
                 jar: true,
                 json: (pOptions.body),
                 body: pOptions.body ? pOptions.body : null,
-                timeout: REQUEST_TIMEOUT
+                timeout: pOptions.timeout ? pOptions.timeout : REQUEST_TIMEOUT
                 }, function(err, pResponse)
                 {
                     tmpErr = err;
                     tmpResponse = pResponse;
-                }).pipe(libFS.createWriteStream(tmpBufferFile))
-                .on('close', function()
+                })
+                .once('error', function(err)
+                {
+                    return fCallback(err);
+                })
+                .pipe(libFS.createWriteStream(tmpBufferFile))
+                .once('close', function()
                 {
                     return fCallback(tmpErr, tmpResponse, tmpBufferFile);
                 });

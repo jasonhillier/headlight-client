@@ -147,5 +147,20 @@ suite
                 });
 			}
 		);
+
+		test
+		(
+			'test custom request timeout for getFile',
+			function(fComplete)
+			{
+				//set timeout to an unreasonably low number, so that it will always timeout
+				_HeadlightClient.getFileExtended('Media/Sample_1', {timeout: 1}, function(pError, pResponse, pBufferFile)
+                {
+                    Expect(`${pError}`).to.equal('Error: ETIMEDOUT', 'Expected timeout error did not occur');
+
+                    return fComplete();
+                });
+			}
+		);
     }
 );
