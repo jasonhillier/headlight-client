@@ -116,23 +116,6 @@ suite
 
         test
 		(
-			'should be able to download media from remote server',
-			function(fComplete)
-			{
-				_HeadlightClient.downloadFile('Sample_1', function(pError, pFileInfo, pFileStream)
-                {
-                    if (!pError)
-                    {
-                        Expect(pFileInfo.contentType).to.equal('image/jpeg', 'File download type does not match what was uploaded!');
-                    }
-
-                    return fComplete(pError);
-                });
-			}
-		);
-
-        test
-		(
 			'should be able to check if any files exist matching search criteria on remote server',
 			function(fComplete)
 			{
@@ -141,6 +124,23 @@ suite
                     if (!pError)
                     {
                         Expect(pExists).to.equal(true, 'File should exist!');
+                    }
+
+                    return fComplete(pError);
+                });
+			}
+		);
+
+		test
+		(
+			'should be able to download media from remote server',
+			function(fComplete)
+			{
+				_HeadlightClient.downloadFile('Sample_1', function(pError, pFileInfo, pFileStream)
+                {
+                    if (!pError)
+                    {
+                        Expect(pFileInfo.contentType).to.equal('image/jpeg', 'File download type does not match what was uploaded!');
                     }
 
                     return fComplete(pError);
@@ -159,6 +159,42 @@ suite
                     Expect(`${pError}`).to.equal('Error: ETIMEDOUT', 'Expected timeout error did not occur');
 
                     return fComplete();
+                });
+			}
+		);
+
+		test
+		(
+			'should be able to upload artifact to remote server',
+			function(fComplete)
+			{
+                var tmpFileStream = fs.createReadStream(__dirname + '/sample.jpeg');
+
+				_HeadlightClient.uploadArtifact(1, 1, 'image/jpeg', tmpFileStream, function(pError, pResponse)
+                {
+                    if (!pError)
+                    {
+                        Expect(pResponse.statusCode).to.equal(200, 'File upload HTTP error!');
+                    }
+
+                    return fComplete(pError);
+                });
+			}
+		);
+
+		test
+		(
+			'should be able to download artifact from remote server',
+			function(fComplete)
+			{
+				_HeadlightClient.downloadArtifact(1, 1, function(pError, pFileInfo, pFileStream)
+                {
+                    if (!pError)
+                    {
+                        Expect(pFileInfo.contentType).to.equal('image/jpeg', 'File download type does not match what was uploaded!');
+                    }
+
+                    return fComplete(pError);
                 });
 			}
 		);

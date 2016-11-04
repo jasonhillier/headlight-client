@@ -162,9 +162,36 @@ var HeadlightClient = function()
          */
         var uploadFile = function(pFileName, pContentType, pFileStream, fCallback)
         {
+            return uploadFileExtended(pFileName, {}, pContentType, pFileStream, fCallback);
+        }
+
+        /**
+         * Save stream to Artifact endpoint
+         *
+         * @method uploadArtifact
+         */
+        var uploadArtifact = function(pIDArtfact, pVersion, pContentType, pFileStream, fCallback)
+        {
+            tmpFileName = pVersion;
+
+            return uploadFileExtended(tmpFileName, {url: `Artifact/Media/${pIDArtfact}/`}, pContentType, pFileStream, fCallback);
+        }
+
+        /**
+         * Save stream to RemoteFS
+         *
+         * @method uploadFile
+         */
+        var uploadFileExtended = function(pFileName, pOptions, pContentType, pFileStream, fCallback)
+        {
+            var tmpUrl = 'Media/';
+            if (pOptions.url)
+                tmpUrl = pOptions.url;
+            
             var tmpRequest = libRequest({
                 method: 'POST',
-                url: _ServerURL + 'Media/' + pFileName,
+                url: `${_ServerURL}${tmpUrl}${pFileName}`,
+                timeout: pOptions.timeout ? pOptions.timeout : REQUEST_TIMEOUT,
                 headers:
                 {
                     'Content-Type': pContentType
@@ -196,15 +223,41 @@ var HeadlightClient = function()
          */
         var downloadFile = function(pFileName, fCallback)
         {
+            return downloadFileExtended(pFileName, {}, fCallback);
+        }
+
+        /**
+         * Download file from RemoteFS
+         *
+         * @method downloadFile
+         */
+        var downloadArtifact = function(pIDArtifact, pVersion, fCallback)
+        {
+            tmpFileName = pVersion;
+
+            return downloadFileExtended(tmpFileName, {url: `Artifact/Media/${pIDArtifact}/`}, fCallback);
+        }
+
+        /**
+         * Download file from RemoteFS
+         *
+         * @method downloadFileExtended
+         */
+        var downloadFileExtended = function(pFileName, pOptions, fCallback)
+        {
+            var tmpUrl = 'Media/';
+            if (pOptions.url)
+                tmpUrl = pOptions.url;
+            
             // Check if the file is already there -- and overwrite if necessary.
             _Log.trace('Looking up file in RemoteFS', pFileName);
 
             var tmpResponseObject = libRequest({
                 method: 'GET',
-                url: _ServerURL + 'Media/' + pFileName,
+                url: `${_ServerURL}${tmpUrl}${pFileName}`,
                 json: false, //file download
                 jar: true,
-                timeout: REQUEST_TIMEOUT,
+                timeout: pOptions.timeout ? pOptions.timeout : REQUEST_TIMEOUT,
                 encoding: null
             }, function(pError, pResponse, pBody)
             {
@@ -306,7 +359,11 @@ var HeadlightClient = function()
 			getFileExtended: getFileExtended,
 			post: post,
 			uploadFile: uploadFile,
+            uploadFileExtended: uploadFileExtended,
+            uploadArtifact: uploadArtifact,
 			downloadFile: downloadFile,
+            downloadFileExtended: downloadFileExtended,
+            downloadArtifact: downloadArtifact,
 			checkIfFileExists: checkIfFileExists,
 			//findFilesInGrid: findFilesInGrid,
 			//deleteFileInGrid: deleteFileInGrid,
