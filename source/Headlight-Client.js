@@ -30,7 +30,7 @@ var HeadlightClient = function()
         //prepare a buffer directory for operations that require file-on-disk
 		var BUFFER_DIR = 'buffer/';
 
-        var REQUEST_TIMEOUT = 10 * 1000; //10 seconds (to recv headers)
+        var REQUEST_TIMEOUT = 60 * 1000; //60 seconds
 
         /**
          * Login to Headlight
