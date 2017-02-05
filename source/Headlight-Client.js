@@ -85,7 +85,7 @@ var HeadlightClient = function()
 
                     _Log.trace('Authenticated with Headlight API');
                     
-                    return fCallback();
+                    return fCallback(null, pResponse.body);
                 });
         }
 
