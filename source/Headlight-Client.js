@@ -27,6 +27,8 @@ var HeadlightClient = function()
         var _Username = pUsername || _Settings.Headlight.Username;
         var _Password = pPassword || _Settings.Headlight.Password;
 
+        var _CookieJar = libRequest.jar();
+
         //prepare a buffer directory for operations that require file-on-disk
 		var BUFFER_DIR = 'buffer/';
 
@@ -44,7 +46,7 @@ var HeadlightClient = function()
                 url: _ServerURL + 'Authenticate',
                 body: {UserName: _Username, Password: _Password},
                 json: true,
-                jar: true,
+                jar: _CookieJar,
                 timeout: REQUEST_TIMEOUT
                 }, function (pError, pResponse)
                 {
@@ -61,6 +63,32 @@ var HeadlightClient = function()
             );
         }
 
+        var loginWithSession = function(pSessionToken, fCallback)
+        {
+            //console.log(pSessionToken);
+
+            _CookieJar.setCookie(libRequest.cookie(`UserSession=${pSessionToken}`), _ServerURL);
+
+            libRequest({
+                method: 'GET',
+                url: _ServerURL + '/CheckSession',
+                json: true,
+                jar: _CookieJar,
+                timeout: REQUEST_TIMEOUT
+                }, function (pError, pResponse)
+                {
+                    if (pError || !pResponse.body.UserID)
+                    {
+                        _Log.error('Failed to authenticate with Headlight API server!');
+                        return fCallback('Failed to authenticate!');
+                    }
+
+                    _Log.trace('Authenticated with Headlight API');
+                    
+                    return fCallback();
+                });
+        }
+
         /**
          * HTTP GET API request to Headlight
          *
@@ -72,7 +100,7 @@ var HeadlightClient = function()
                 method: 'GET',
                 url: _ServerURL + pUrl,
                 json: true,
-                jar: true,
+                jar: _CookieJar,
                 timeout: REQUEST_TIMEOUT
                 }, function (err, pResponse)
                 {
@@ -111,7 +139,7 @@ var HeadlightClient = function()
                 method: pOptions.method,
                 url: _ServerURL + pUrl,
                 gzip: true,
-                jar: true,
+                jar: _CookieJar,
                 json: (pOptions.body),
                 body: pOptions.body ? pOptions.body : null,
                 timeout: pOptions.timeout ? pOptions.timeout : REQUEST_TIMEOUT
@@ -143,7 +171,7 @@ var HeadlightClient = function()
                 url: _ServerURL + pUrl,
                 body: pPostData,
                 json: true,
-                jar: true,
+                jar: _CookieJar,
                 timeout: REQUEST_TIMEOUT
                 }, function (err, pResponse)
                 {
@@ -256,7 +284,7 @@ var HeadlightClient = function()
                 method: 'GET',
                 url: `${_ServerURL}${tmpUrl}${pFileName}`,
                 json: false, //file download
-                jar: true,
+                jar: _CookieJar,
                 timeout: pOptions.timeout ? pOptions.timeout : REQUEST_TIMEOUT,
                 encoding: null
             }, function(pError, pResponse, pBody)
@@ -354,6 +382,7 @@ var HeadlightClient = function()
 		var tmpHeadlightClient = (
 		{
             login: login,
+            loginWithSession: loginWithSession,
 			get: get,
 			getFile: getFile,
 			getFileExtended: getFileExtended,
