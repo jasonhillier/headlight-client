@@ -22,6 +22,7 @@ var HeadlightClient = function()
         var libStream = require('stream');
         var libRequest = require('request');
         var libEntities = require(__dirname + '/Headlight-Entities').new(pFable);
+        var libUtils = require(__dirname + '/Headlight-Utils').new(pFable);
 
         var _ServerURL = (pServerURL || _Settings.Headlight.ServerURL) + '/1.0/';
         var _Username = pUsername || _Settings.Headlight.Username;
@@ -61,6 +62,14 @@ var HeadlightClient = function()
                     return fCallback();
                 }
             );
+        }
+
+        var loginWithCredentials = function(pCredentials, fCallback)
+        {
+            _Username = pCredentials.Username;
+            _Password = pCredentials.Password;
+
+            return login(fCallback);
         }
 
         var loginWithSession = function(pSessionToken, fCallback)
@@ -220,11 +229,11 @@ var HeadlightClient = function()
                 method: 'POST',
                 url: `${_ServerURL}${tmpUrl}${pFileName}`,
                 timeout: pOptions.timeout ? pOptions.timeout : REQUEST_TIMEOUT,
+                jar: _CookieJar,
                 headers:
                 {
                     'Content-Type': pContentType
-                },
-                jar: true
+                }
             });
 
             pFileStream.pipe(tmpRequest);
@@ -382,6 +391,7 @@ var HeadlightClient = function()
 		var tmpHeadlightClient = (
 		{
             login: login,
+            loginWithCredentials: loginWithCredentials,
             loginWithSession: loginWithSession,
 			get: get,
 			getFile: getFile,
@@ -397,6 +407,7 @@ var HeadlightClient = function()
 			//findFilesInGrid: findFilesInGrid,
 			//deleteFileInGrid: deleteFileInGrid,
             Entities: libEntities,
+            Utils: libUtils,
 			new: createNew
 		});
 
