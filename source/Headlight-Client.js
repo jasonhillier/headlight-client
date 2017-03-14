@@ -122,6 +122,29 @@ var HeadlightClient = function()
         }
 
         /**
+         * HTTP DELETE API request to Headlight
+         *
+         * @method del
+         */
+        var del = function(pUrl, fCallback, pNoRetry)
+        {
+            libRequest({
+                method: 'DELETE',
+                url: _ServerURL + pUrl,
+                json: true,
+                jar: _CookieJar,
+                timeout: REQUEST_TIMEOUT
+                }, function (err, pResponse)
+                {
+                    handleHeadlightResponse(err, pResponse, pNoRetry, function retry()
+                    {
+                        return del(pUrl, fCallback, true);
+                    },
+                    fCallback);
+                });
+        }
+
+        /**
          * HTTP GET basic file download request to Headlight
          *
          * @method getFile
@@ -394,6 +417,7 @@ var HeadlightClient = function()
             loginWithCredentials: loginWithCredentials,
             loginWithSession: loginWithSession,
 			get: get,
+            del: del,
 			getFile: getFile,
 			getFileExtended: getFileExtended,
 			post: post,
