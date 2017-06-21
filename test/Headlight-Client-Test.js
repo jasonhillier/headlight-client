@@ -17,9 +17,9 @@ var _MockSettings = (
 	ProductVersion: '0.0.1',
     Headlight:
     {
-        ServerURL: 'https://headlightstg.paviasystems.com',
-        Username: 'test',
-        Password: 'test'
+        ServerURL: 'http://localhost:8080',
+        Username: 'jason',
+        Password: 'pegasus'
     }
 });
 
@@ -196,6 +196,21 @@ suite
 
                     return fComplete(pError);
                 });
+			}
+		);
+
+		test
+		(
+			'should be able to page through some Observations by date',
+			function(fComplete)
+			{
+				_HeadlightClient.getAsyncRecordsPagedByDate('/ObservationsByUpdateDate', {}, 10, function(pError, pRecords, fCallback)
+                {
+					Expect(pRecords.length).to.equal(10, 'Should have found 10 observations!');
+					//console.log(pRecords[pRecords.length-1]);
+
+					return fCallback(null, true); //tell it to stop after first iteration
+                }, fComplete);
 			}
 		);
     }

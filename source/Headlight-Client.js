@@ -29,6 +29,7 @@ var HeadlightClient = function()
         var _Password = pPassword || _Settings.Headlight.Password;
 
         var _CookieJar = libRequest.jar();
+        var _CurrentSession = null;
 
         //prepare a buffer directory for operations that require file-on-disk
 		var BUFFER_DIR = 'buffer/';
@@ -58,6 +59,7 @@ var HeadlightClient = function()
                     }
 
                     _Log.trace('Authenticated with Headlight API');
+                    _CurrentSession = pResponse.body;
                     
                     return fCallback();
                 }
@@ -93,6 +95,7 @@ var HeadlightClient = function()
                     }
 
                     _Log.trace('Authenticated with Headlight API');
+                    _CurrentSession = pResponse.body;
                     
                     return fCallback(null, pResponse.body);
                 });
@@ -119,6 +122,53 @@ var HeadlightClient = function()
                     },
                     fCallback);
                 });
+        }
+
+        /**
+         * Recursively call GET until error, page runs out, or invoker cancels it.
+         *
+         * @method get
+         */
+        getAsyncRecordsPagedByDate = function(pUrl, pOptions, pSize, fIterator, fCallback)
+        {
+            let tmpDate = pOptions.Date || new Date().toISOString();
+
+            get(`${pUrl}/${tmpDate}/${pSize}`, (pError, pResponse)=>
+            {
+                if (pError)
+                    return fCallback(pError);
+                
+                let tmpRecords = pResponse.body;
+
+                //Call invoker's iterator function
+                fIterator(pError, tmpRecords, (pIterError, pIterStop)=>
+                {
+                    if (pIterError)
+                    {
+                        return fCallback(pIterError);
+                    }
+                    else if (pIterStop)
+                    {
+                        return fCallback();
+                    }
+                    else
+                    {
+                        if (!tmpRecords.length ||
+                            tmpRecords.length < pSize)
+                        {
+                            return fCallback(); //no more records to get
+                        }
+                        else
+                        {
+                            //get the date from the last record
+                            pOptions.Date = tmpRecords[tmpRecords.length-1][(pOptions.DateField || 'UpdateDate')];
+
+                            //recurse
+                            return getAsyncRecordsPagedByDate(pUrl, pOptions, pSize, fIterator, fCallback);
+                        }
+                    }
+                });
+            }, true);
         }
 
         /**
@@ -210,6 +260,30 @@ var HeadlightClient = function()
                     handleHeadlightResponse(err, pResponse, pNoRetry, function retry()
                     {
                         return post(pUrl, pPostData, fCallback, true);
+                    },
+                    fCallback);
+                });
+        }
+
+        /**
+         * HTTP PUT API request to Headlight
+         *
+         * @method put
+         */
+        var put = function(pUrl, pPostData, fCallback, pNoRetry)
+        {
+            libRequest({
+                method: 'PUT',
+                url: _ServerURL + pUrl,
+                body: pPostData,
+                json: true,
+                jar: _CookieJar,
+                timeout: REQUEST_TIMEOUT
+                }, function (err, pResponse)
+                {
+                    handleHeadlightResponse(err, pResponse, pNoRetry, function retry()
+                    {
+                        return put(pUrl, pPostData, fCallback, true);
                     },
                     fCallback);
                 });
@@ -367,6 +441,11 @@ var HeadlightClient = function()
          */
         var handleHeadlightResponse = function(pError, pResponse, pNoRetry, fRetry, fCallback)
         {
+            if (!pResponse || !pResponse.body)
+            {
+                if (!pError)
+                    pError = 'No response received!';
+            }
             if (!pNoRetry &&
                 (pError || pResponse.body.Error)) //TODO: check status code
             {
@@ -408,6 +487,16 @@ var HeadlightClient = function()
 			return BUFFER_DIR + libUUID.getUUID();
 		}
 
+        var setTimeout = function(pTimeoutSeconds)
+        {
+            REQUEST_TIMEOUT = pTimeoutSeconds * 1000;
+        }
+
+        var currentSession = function()
+        {
+            return _CurrentSession;
+        }
+
         /**
 		* Container Object for our Factory Pattern
 		*/
@@ -416,10 +505,13 @@ var HeadlightClient = function()
             login: login,
             loginWithCredentials: loginWithCredentials,
             loginWithSession: loginWithSession,
+            currentSession: currentSession,
 			get: get,
             del: del,
+            put: put,
 			getFile: getFile,
 			getFileExtended: getFileExtended,
+            getAsyncRecordsPagedByDate: getAsyncRecordsPagedByDate,
 			post: post,
 			uploadFile: uploadFile,
             uploadFileExtended: uploadFileExtended,
@@ -432,6 +524,7 @@ var HeadlightClient = function()
 			//deleteFileInGrid: deleteFileInGrid,
             Entities: libEntities,
             Utils: libUtils,
+            setTimeout: setTimeout,
 			new: createNew
 		});
 

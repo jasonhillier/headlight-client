@@ -17,7 +17,7 @@ var _MockSettings = (
 	ProductVersion: '0.0.1',
     Headlight:
     {
-        ServerURL: 'https://headlightstg.paviasystems.com'
+        ServerURL: 'http://localhost:8080'
     }
 });
 
