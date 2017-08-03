@@ -129,6 +129,71 @@ var HeadlightClient = function()
          *
          * @method get
          */
+        getAllRecordsPaged = function(pUrl, pOptions, pSize, fIterator, fCallback)
+        {
+            if (!fIterator)
+            {
+                fIterator = (pError, tmpRecords, fNext)=>
+                {
+                    return fNext();
+                }
+            }
+            if (!pOptions.Page)
+                pOptions.Page = 0;
+            if (!pOptions.AllRecords)
+                pOptions.AllRecords = [];
+            
+            get(`${pUrl}/${pOptions.Page}/${pSize}`, (pError, pResponse)=>
+            {
+                if (pError)
+                    return fCallback(pError);
+                
+                let tmpRecords = pResponse.body;
+                pOptions.AllRecords.push(tmpRecords);
+
+                //Call invoker's iterator function
+                fIterator(pError, tmpRecords, (pIterError, pIterStop)=>
+                {
+                    if (pIterError)
+                    {
+                        let tmpResults = pOptions.AllRecords;
+                        delete pOptions['Page'];
+                        delete pOptions['AllRecords'];
+                        return fCallback(pIterError, tmpResults);
+                    }
+                    else if (pIterStop)
+                    {
+                        let tmpResults = pOptions.AllRecords;
+                        delete pOptions['Page'];
+                        delete pOptions['AllRecords'];
+                        return fCallback(null, tmpResults);
+                    }
+                    else
+                    {
+                        if (!tmpRecords.length ||
+                            tmpRecords.length < pSize)
+                        {
+                            let tmpResults = pOptions.AllRecords;
+                            delete pOptions['Page'];
+                            delete pOptions['AllRecords'];
+                            return fCallback(null, tmpResults); //no more records to get
+                        }
+                        else
+                        {
+                            pOptions.Page++;
+                            //recurse
+                            return getAllRecordsPaged(pUrl, pOptions, pSize, fIterator, fCallback);
+                        }
+                    }
+                });
+            }, true);
+        }
+
+        /**
+         * Recursively call GET until error, page runs out, or invoker cancels it.
+         *
+         * @method get
+         */
         getAsyncRecordsPagedByDate = function(pUrl, pOptions, pSize, fIterator, fCallback)
         {
             let tmpDate = pOptions.Date || new Date().toISOString();
@@ -512,6 +577,7 @@ var HeadlightClient = function()
 			getFile: getFile,
 			getFileExtended: getFileExtended,
             getAsyncRecordsPagedByDate: getAsyncRecordsPagedByDate,
+            getAllRecordsPaged: getAllRecordsPaged,
 			post: post,
 			uploadFile: uploadFile,
             uploadFileExtended: uploadFileExtended,

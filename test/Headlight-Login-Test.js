@@ -71,5 +71,23 @@ suite
                 });
             }
         );
+
+        this.timeout(5000);
+        
+        test
+		(
+			'should be able to page through all records in a normal paged endpoint',
+			function(fComplete)
+			{
+				_HeadlightClient.getAllRecordsPaged('/Projects', {}, 10, null, function(pError, pRecords)
+                {
+					Expect(pError).to.be.null;
+					Expect(pRecords.length).to.be.greaterThan(10, 'Should have pages of projects');
+					//console.log(pRecords[pRecords.length-1]);
+
+					return fComplete();
+                });
+			}
+		);
     }
 );
