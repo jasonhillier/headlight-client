@@ -72,8 +72,8 @@ suite
             }
         );
 
-        this.timeout(5000);
-        
+        this.timeout(50000);
+
         test
 		(
 			'should be able to page through all records in a normal paged endpoint',

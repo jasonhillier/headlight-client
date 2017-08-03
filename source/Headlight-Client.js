@@ -142,6 +142,8 @@ var HeadlightClient = function()
                 pOptions.Page = 0;
             if (!pOptions.AllRecords)
                 pOptions.AllRecords = [];
+
+            //console.log(`${pUrl}/${pOptions.Page}/${pSize}`);
             
             get(`${pUrl}/${pOptions.Page}/${pSize}`, (pError, pResponse)=>
             {
@@ -149,7 +151,7 @@ var HeadlightClient = function()
                     return fCallback(pError);
                 
                 let tmpRecords = pResponse.body;
-                pOptions.AllRecords.push(tmpRecords);
+                pOptions.AllRecords = pOptions.AllRecords.concat(tmpRecords);
 
                 //Call invoker's iterator function
                 fIterator(pError, tmpRecords, (pIterError, pIterStop)=>
@@ -180,7 +182,7 @@ var HeadlightClient = function()
                         }
                         else
                         {
-                            pOptions.Page++;
+                            pOptions.Page += tmpRecords.length;
                             //recurse
                             return getAllRecordsPaged(pUrl, pOptions, pSize, fIterator, fCallback);
                         }
