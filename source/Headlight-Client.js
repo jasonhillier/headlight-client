@@ -59,6 +59,8 @@ var HeadlightClient = function()
                     }
 
                     _Log.trace('Authenticated with Headlight API');
+                    console.log('COOKIE DEBUG', _CookieJar._jar.store.idx);
+
                     _CurrentSession = pResponse.body;
                     
                     return fCallback();
