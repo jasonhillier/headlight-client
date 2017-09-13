@@ -110,17 +110,30 @@ var HeadlightClient = function()
          */
         var get = function(pUrl, fCallback, pNoRetry)
         {
+            return request(pUrl, {}, fCallback, pNoRetry);
+        }
+
+        /**
+         * HTTP request to Headlight
+         *
+         * @method request
+         */
+        var request = function(pUrl, pOptions, fCallback, pNoRetry)
+        {
+            if (!pOptions) pOptions = {};
+
             libRequest({
-                method: 'GET',
+                method: pOptions.method ? pOptions.method : 'GET',
                 url: _ServerURL + pUrl,
                 json: true,
                 jar: _CookieJar,
+                body: pOptions.body ? pOptions.body : null,
                 timeout: REQUEST_TIMEOUT
                 }, function (err, pResponse)
                 {
                     handleHeadlightResponse(err, pResponse, pNoRetry, function retry()
                     {
-                        return get(pUrl, fCallback, true);
+                        return request(pUrl, pOptions, fCallback, true);
                     },
                     fCallback);
                 });
@@ -140,6 +153,7 @@ var HeadlightClient = function()
                     return fNext();
                 }
             }
+            if (!pOptions) pOptions = {};
             if (!pOptions.Page)
                 pOptions.Page = 0;
             if (!pOptions.AllRecords)
@@ -147,7 +161,7 @@ var HeadlightClient = function()
 
             //console.log(`${pUrl}/${pOptions.Page}/${pSize}`);
             
-            get(`${pUrl}/${pOptions.Page}/${pSize}`, (pError, pResponse)=>
+            request(`${pUrl}/${pOptions.Page}/${pSize}`, pOptions, (pError, pResponse)=>
             {
                 if (pError)
                     return fCallback(pError);
@@ -202,7 +216,7 @@ var HeadlightClient = function()
         {
             let tmpDate = pOptions.Date || new Date().toISOString();
 
-            get(`${pUrl}/${tmpDate}/${pSize}`, (pError, pResponse)=>
+            request(`${pUrl}/${tmpDate}/${pSize}`, pOptions, (pError, pResponse)=>
             {
                 if (pError)
                     return fCallback(pError);
@@ -247,20 +261,13 @@ var HeadlightClient = function()
          */
         var del = function(pUrl, fCallback, pNoRetry)
         {
-            libRequest({
-                method: 'DELETE',
-                url: _ServerURL + pUrl,
-                json: true,
-                jar: _CookieJar,
-                timeout: REQUEST_TIMEOUT
-                }, function (err, pResponse)
+            return request(pUrl,
                 {
-                    handleHeadlightResponse(err, pResponse, pNoRetry, function retry()
-                    {
-                        return del(pUrl, fCallback, true);
-                    },
-                    fCallback);
-                });
+                    method: 'DELETE'
+                },
+                fCallback,
+                pNoRetry
+            );
         }
 
         /**
@@ -317,21 +324,14 @@ var HeadlightClient = function()
          */
         var post = function(pUrl, pPostData, fCallback, pNoRetry)
         {
-            libRequest({
-                method: 'POST',
-                url: _ServerURL + pUrl,
-                body: pPostData,
-                json: true,
-                jar: _CookieJar,
-                timeout: REQUEST_TIMEOUT
-                }, function (err, pResponse)
+            return request(pUrl,
                 {
-                    handleHeadlightResponse(err, pResponse, pNoRetry, function retry()
-                    {
-                        return post(pUrl, pPostData, fCallback, true);
-                    },
-                    fCallback);
-                });
+                    method: 'POST',
+                    body: pPostData
+                },
+                fCallback,
+                pNoRetry
+            );
         }
 
         /**
@@ -341,21 +341,14 @@ var HeadlightClient = function()
          */
         var put = function(pUrl, pPostData, fCallback, pNoRetry)
         {
-            libRequest({
-                method: 'PUT',
-                url: _ServerURL + pUrl,
-                body: pPostData,
-                json: true,
-                jar: _CookieJar,
-                timeout: REQUEST_TIMEOUT
-                }, function (err, pResponse)
+            return request(pUrl,
                 {
-                    handleHeadlightResponse(err, pResponse, pNoRetry, function retry()
-                    {
-                        return put(pUrl, pPostData, fCallback, true);
-                    },
-                    fCallback);
-                });
+                    method: 'PUT',
+                    body: pPostData
+                },
+                fCallback,
+                pNoRetry
+            );
         }
 
         /**
