@@ -21,6 +21,8 @@ var HeadlightClient = function()
         var libUUID = require('fable-uuid');
         var libStream = require('stream');
         var libRequest = require('request');
+        var tough = require('tough-cookie');
+        var Cookie = tough.Cookie;
         var libEntities = require(__dirname + '/Headlight-Entities').new(pFable);
         var libUtils = require(__dirname + '/Headlight-Utils').new(pFable);
 
@@ -48,7 +50,7 @@ var HeadlightClient = function()
                 url: _ServerURL + 'Authenticate',
                 body: {UserName: _Username, Password: _Password},
                 json: true,
-                jar: _CookieJar,
+                //jar: _CookieJar,
                 timeout: REQUEST_TIMEOUT
                 }, function (pError, pResponse)
                 {
@@ -59,6 +61,14 @@ var HeadlightClient = function()
                     }
 
                     _Log.trace('Authenticated with Headlight API');
+                    //manually process cookies (ignoring domain)
+                    for (let i=0; i<pResponse.headers['set-cookie'].length; i++)
+                    {
+                        //console.log('==>', pResponse.headers['set-cookie'][i]);
+                        var tmpCookie = Cookie.parse(pResponse.headers['set-cookie'][i]);
+                        //console.log(tmpCookie);
+                        _CookieJar.setCookie(tmpCookie, _ServerURL);
+                    }
                     console.log('COOKIE DEBUG', _CookieJar._jar.store.idx);
 
                     _CurrentSession = pResponse.body;
