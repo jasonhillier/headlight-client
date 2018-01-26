@@ -213,5 +213,34 @@ suite
                 }, fComplete);
 			}
 		);
+
+		test
+		(
+			'should be returning an error in case server connection timedout!',
+			function(fComplete)
+			{
+				_HeadlightClient.setTimeout(0.01);
+				_HeadlightClient.get('ObservationManifests', function(pError, pResponse)
+                {
+					Expect(`${pError}`).to.equal('Error: ESOCKETTIMEDOUT', 'Expected server timeout error did not occur');
+					
+					return fComplete();
+                });
+			}
+		);
+
+		test
+		(
+			'should be return an error in case server connection refused!',
+			function(fComplete)
+			{
+				_HeadlightClient.setServerURL('http://localhost:1234');
+				_HeadlightClient.get('ObservationManifests', function(pError, pResponse)
+                {
+					Expect(`${pError.code}`).to.equal('ECONNREFUSED', 'Expected Connection error did not occur');
+                    return fComplete();
+                });
+			}
+		);
     }
 );

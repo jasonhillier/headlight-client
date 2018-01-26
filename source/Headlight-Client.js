@@ -512,7 +512,18 @@ var HeadlightClient = function()
          * @method handleHeadlightResponse
          */
         var handleHeadlightResponse = function(pError, pResponse, pNoRetry, fRetry, fCallback)
-        {
+        {   
+            if (pError)
+            {
+                if (pError.code == 'ECONNREFUSED' || 
+                    pError.code == 'ECONNRESET' ||
+                    pError.code == 'ESOCKETTIMEDOUT')
+                {
+                    _Log.error('[ServerConnection] ERROR ' + pError);
+                    return fCallback(pError);
+                }
+            }
+            
             if (!pResponse || !pResponse.body)
             {
                 if (!pError)
@@ -569,6 +580,11 @@ var HeadlightClient = function()
             return _CurrentSession;
         }
 
+        var setServerURL = function(pUrl)
+        {
+            _ServerURL = pUrl + '/1.0/';
+        }
+
         /**
 		* Container Object for our Factory Pattern
 		*/
@@ -598,6 +614,7 @@ var HeadlightClient = function()
             Entities: libEntities,
             Utils: libUtils,
             setTimeout: setTimeout,
+            setServerURL : setServerURL,
 			new: createNew
 		});
 
