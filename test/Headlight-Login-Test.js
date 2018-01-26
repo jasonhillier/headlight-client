@@ -70,8 +70,23 @@ suite
                     return fDone();
                 });
             }
-        );
+		);
+		
+		test
+		(
+			'should be able to lookup a record',
+			function(fComplete)
+			{
+				var tmp = 'CONST FLAGGING/SERV';
+				_HeadlightClient.get(`Organizations/FilteredTo/FBV~Name~EQ~${encodeURIComponent(tmp)}~/0/1`, (pError, pHeadlightResult)=>
+                {
+					console.log(pHeadlightResult.body);
 
+					return fComplete();
+                });
+			}
+		);
+		/*
         this.timeout(50000);
 
         test
@@ -89,5 +104,6 @@ suite
                 });
 			}
 		);
+		*/
     }
 );

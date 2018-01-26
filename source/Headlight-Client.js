@@ -533,7 +533,7 @@ var HeadlightClient = function()
             }
             else
             {
-                return fCallback(null, pResponse);
+                return fCallback(pError, pResponse);
             }
         }
 
