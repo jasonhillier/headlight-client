@@ -71,7 +71,7 @@ suite
                 });
             }
 		);
-		
+		/*
 		test
 		(
 			'should be able to lookup a record',
@@ -86,7 +86,7 @@ suite
                 });
 			}
 		);
-		/*
+		*/
         this.timeout(50000);
 
         test
@@ -104,6 +104,5 @@ suite
                 });
 			}
 		);
-		*/
     }
 );
