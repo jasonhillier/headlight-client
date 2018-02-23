@@ -69,7 +69,7 @@ var HeadlightClient = function()
                         //console.log(tmpCookie);
                         _CookieJar.setCookie(tmpCookie, _ServerURL);
                     }
-                    console.log('COOKIE DEBUG', _CookieJar._jar.store.idx);
+                    //console.log('COOKIE DEBUG', _CookieJar._jar.store.idx);
 
                     _CurrentSession = pResponse.body;
                     
