@@ -38,7 +38,7 @@ suite
 			'initialize should build a happy little object',
 			function()
 			{
-				_HeadlightClient = require('../source/Headlight-Client').new(_Fable);
+				_HeadlightClient = new (require('../source/Headlight-Client'))(_Fable);
 				
 				Expect(_HeadlightClient)
 					.to.be.an('object', 'PaviaUtility should initialize as an object directly from the require statement.');
