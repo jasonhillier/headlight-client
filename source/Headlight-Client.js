@@ -16,12 +16,12 @@ var Cookie = tough.Cookie;
 const BUFFER_DIR = 'buffer/'; //prepare a buffer directory for operations that require file-on-disk
 const REQUEST_TIMEOUT = 60 * 1000; //60 seconds
 
-module.exports = class HeadlightBundle
+module.exports = class HeadlightClient
 {
     constructor(pFable, pServerURL, pUsername, pPassword)
     {
         if (!pFable || typeof(pFable) !== 'object' || !pFable.log)
-            throw new Exception('[HeadlightBundleBase] constructor: Invalid fable framework object!');
+            throw new Exception('[HeadlightClient] constructor: Invalid fable framework object!');
         this._Fable = pFable;
         this._CommonServices = pFable;
         this._Log = pFable.log;
