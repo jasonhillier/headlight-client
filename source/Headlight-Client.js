@@ -29,6 +29,7 @@ module.exports = class HeadlightClient
         
         this.libEntities = require(__dirname + '/Headlight-Entities').new(pFable);
         this.libUtils = require(__dirname + '/Headlight-Utils').new(pFable);
+        this.libAsyncClient = new (require(__dirname + '/Headlight-AsyncClient'))(pFable, this);
 
         this._ServerURL = (pServerURL || this._Settings.Headlight.ServerURL) + '/1.0/';
         this._Username = pUsername || this._Settings.Headlight.Username;
@@ -46,6 +47,11 @@ module.exports = class HeadlightClient
     get Utils()
     {
         return this.libUtils;
+    }
+
+    get Async()
+    {
+        return this.libAsyncClient;
     }
     
     /**
