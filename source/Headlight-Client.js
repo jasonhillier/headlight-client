@@ -331,6 +331,9 @@ module.exports = class HeadlightClient
             {
                 tmpErr = err;
                 tmpResponse = pResponse;
+
+                if (pResponse.body.indexOf('Error') > 0)
+                    tmpErr = pResponse.body;
             })
             .once('error', (err)=>
             {
