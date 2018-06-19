@@ -324,16 +324,13 @@ module.exports = class HeadlightClient
             url: this._ServerURL + pUrl,
             gzip: true,
             jar: this._CookieJar,
-            json: (pOptions.body),
+            json: true,
             body: pOptions.body ? pOptions.body : null,
             timeout: pOptions.timeout ? pOptions.timeout : REQUEST_TIMEOUT
             }, (err, pResponse)=>
             {
-                tmpErr = err;
+                tmpErr = pResponse.body['Error']? pResponse.body.Error :  err;
                 tmpResponse = pResponse;
-
-                if (pResponse.body.indexOf('Error') > 0)
-                    tmpErr = pResponse.body;
             })
             .once('error', (err)=>
             {
