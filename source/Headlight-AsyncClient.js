@@ -91,7 +91,7 @@ module.exports = class HeadlightAsyncClient
     {
         return new Promise((resolve, reject) =>
         {
-            this._Headlight.post(pURL, pPostData, (pError, pResponse)=>
+            this._Headlight.put(pURL, pPostData, (pError, pResponse)=>
             {
                 if (pError || !pResponse || !pResponse.body || pResponse.body.Error)
                 {
