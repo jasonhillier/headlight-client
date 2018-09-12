@@ -26,8 +26,16 @@ describe('Node API test', () => {
 
     it('can perform API request which requires authentication', async() => {
         var userApi = client.API(Headlight.API.UserApi);
-        var record = await userApi.read(1);
+        var response = await userApi.read(1);
 
-        expect(record.body.IDUser).to.eq(1);
+        (<any>userApi)._cacheFlag = true; //used for later test
+
+        expect(response.body.IDUser).to.eq(1);
+    });
+
+    it('will load API from cache', async() => {
+        var userApi = client.API(Headlight.API.UserApi);
+
+        expect(userApi).has.property('_cacheFlag');
     });
 });
