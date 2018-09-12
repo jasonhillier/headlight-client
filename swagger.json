@@ -1,0 +1,8540 @@
+{
+	"basePath": "/1.0",
+	"definitions": {
+		"ProjectModel": {
+			"description": "",
+			"properties": {
+				"Tags": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"BidItems": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"LineItems": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"Contractors": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"TagTypes": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"LabelTypes": {
+					"type": "object",
+					"description": ""
+				},
+				"CustomProperties": {
+					"type": "object",
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDProject": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Latitude": {
+					"type": "string",
+					"description": ""
+				},
+				"Longitude": {
+					"type": "string",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDContract": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"Timezone": {
+					"type": "string",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"Tags",
+				"BidItems",
+				"LineItems",
+				"Contractors",
+				"TagTypes",
+				"LabelTypes",
+				"CustomProperties",
+				"IDProject",
+				"GUIDProject",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Name",
+				"Description",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Latitude",
+				"Longitude",
+				"IDCustomer",
+				"IDContract",
+				"ExternalSyncDate",
+				"Timezone",
+				"Status"
+			]
+		},
+		"ModuleModel": {
+			"description": "",
+			"properties": {
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Settings": {
+					"type": "object",
+					"description": ""
+				},
+				"Configuration": {
+					"type": "object",
+					"description": ""
+				},
+				"IDModule": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDModule": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Management": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ModuleHash": {
+					"type": "string",
+					"description": ""
+				},
+				"ConfigurationJSON": {
+					"type": "string",
+					"description": ""
+				},
+				"Ordinal": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDCustomer",
+				"Settings",
+				"Configuration",
+				"IDModule",
+				"GUIDModule",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Management",
+				"ModuleHash",
+				"ConfigurationJSON",
+				"Ordinal"
+			]
+		},
+		"UserModel": {
+			"description": "",
+			"properties": {
+				"LoginPassword": {
+					"type": "string",
+					"description": ""
+				},
+				"PasswordResetKey": {
+					"type": "string",
+					"description": ""
+				},
+				"LastSessionID": {
+					"type": "string",
+					"description": ""
+				},
+				"Settings": {
+					"type": "object",
+					"description": ""
+				},
+				"IDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDUser": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"NameFirst": {
+					"type": "string",
+					"description": ""
+				},
+				"NameLast": {
+					"type": "string",
+					"description": ""
+				},
+				"Email": {
+					"type": "string",
+					"description": ""
+				},
+				"LoginID": {
+					"type": "string",
+					"description": ""
+				},
+				"IDRole": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Title": {
+					"type": "string",
+					"description": ""
+				},
+				"Classification": {
+					"type": "string",
+					"description": ""
+				},
+				"IDProjectOffice": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"EmailPending": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Phone": {
+					"type": "string",
+					"description": ""
+				},
+				"UIHash": {
+					"type": "string",
+					"description": ""
+				},
+				"Timezone": {
+					"type": "string",
+					"description": ""
+				},
+				"Shift": {
+					"type": "string",
+					"description": ""
+				},
+				"SettingsJSON": {
+					"type": "string",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"LastLoginTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"LoginPassword",
+				"PasswordResetKey",
+				"LastSessionID",
+				"Settings",
+				"IDUser",
+				"GUIDUser",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"NameFirst",
+				"NameLast",
+				"Email",
+				"LoginID",
+				"IDRole",
+				"Title",
+				"Classification",
+				"IDProjectOffice",
+				"IDCustomer",
+				"EmailPending",
+				"Phone",
+				"UIHash",
+				"Timezone",
+				"Shift",
+				"SettingsJSON",
+				"ExternalSyncDate",
+				"LastLoginTime"
+			]
+		},
+		"LoginRequest": {
+			"description": "",
+			"properties": {
+				"UserName": {
+					"type": "string",
+					"description": ""
+				},
+				"Password": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"UserName",
+				"Password"
+			]
+		},
+		"Notification": {
+			"description": "",
+			"properties": {
+				"IDNotification": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDNotification": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDNotificationRule": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"RecipientIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"NotificationMessage": {
+					"type": "string",
+					"description": ""
+				},
+				"Unread": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"NotificationType": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDNotification",
+				"GUIDNotification",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"IDNotificationRule",
+				"RecipientIDUser",
+				"NotificationMessage",
+				"Unread",
+				"NotificationType"
+			]
+		},
+		"CommentModel": {
+			"description": "",
+			"properties": {
+				"Metadata": {
+					"type": "object",
+					"description": ""
+				},
+				"IDComment": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDComment": {
+					"type": "string",
+					"description": ""
+				},
+				"IDParent": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Comment": {
+					"type": "string",
+					"description": ""
+				},
+				"CommentHtml": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"Metadata",
+				"IDComment",
+				"GUIDComment",
+				"IDParent",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Comment",
+				"CommentHtml"
+			]
+		},
+		"LineItem": {
+			"description": "",
+			"properties": {
+				"IDLineItem": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDLineItem": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"Units": {
+					"type": "string",
+					"description": ""
+				},
+				"CostPerUnit": {
+					"type": "string",
+					"description": ""
+				},
+				"ExpectedQuantity": {
+					"type": "string",
+					"description": ""
+				},
+				"ActualQuantity": {
+					"type": "string",
+					"description": ""
+				},
+				"PercentComplete": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDBidItem": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"ContractQuantity": {
+					"type": "string",
+					"description": ""
+				},
+				"InstalledQuantity": {
+					"type": "string",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				},
+				"ProposalIdentifier": {
+					"type": "string",
+					"description": ""
+				},
+				"Notes": {
+					"type": "string",
+					"description": ""
+				},
+				"SpecificationYear": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ItemCode": {
+					"type": "string",
+					"description": ""
+				},
+				"ChangeOrderQuantity": {
+					"type": "string",
+					"description": ""
+				},
+				"ChangeOrderQuantityPending": {
+					"type": "string",
+					"description": ""
+				},
+				"ChangeOrderNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"FundingCategory": {
+					"type": "string",
+					"description": ""
+				},
+				"CategoryNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"Tax": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDLineItem",
+				"GUIDLineItem",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Name",
+				"Description",
+				"Units",
+				"CostPerUnit",
+				"ExpectedQuantity",
+				"ActualQuantity",
+				"PercentComplete",
+				"IDBidItem",
+				"IDProject",
+				"IDCustomer",
+				"ExternalSyncDate",
+				"ContractQuantity",
+				"InstalledQuantity",
+				"Status",
+				"ProposalIdentifier",
+				"Notes",
+				"SpecificationYear",
+				"ItemCode",
+				"ChangeOrderQuantity",
+				"ChangeOrderQuantityPending",
+				"ChangeOrderNumber",
+				"FundingCategory",
+				"CategoryNumber",
+				"Tax"
+			]
+		},
+		"BidItem": {
+			"description": "",
+			"properties": {
+				"IDBidItem": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDBidItem": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"IDContract": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDPayItem": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDBidItem",
+				"GUIDBidItem",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Name",
+				"Description",
+				"IDContract",
+				"IDProject",
+				"IDCustomer",
+				"IDPayItem",
+				"ExternalSyncDate"
+			]
+		},
+		"ElectronicSignatureModel": {
+			"description": "",
+			"properties": {
+				"Comments": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"format": "double"
+					},
+					"description": ""
+				},
+				"IDElectronicSignature": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDElectronicSignature": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Signer": {
+					"type": "string",
+					"description": ""
+				},
+				"IDContact": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"SignatureType": {
+					"type": "string",
+					"description": ""
+				},
+				"IDArtifact": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Approved": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"Comments",
+				"IDElectronicSignature",
+				"GUIDElectronicSignature",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Signer",
+				"IDContact",
+				"SignatureType",
+				"IDArtifact",
+				"Approved"
+			]
+		},
+		"ObservationArchive": {
+			"description": "",
+			"properties": {
+				"IDObservationArchive": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDObservationArchive": {
+					"type": "string",
+					"description": ""
+				},
+				"IDObservation": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDObservation": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"IDDevice": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"CaptureLatitude": {
+					"type": "string",
+					"description": ""
+				},
+				"CaptureLongitude": {
+					"type": "string",
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Priority": {
+					"type": "string",
+					"description": ""
+				},
+				"Tags": {
+					"type": "string",
+					"description": ""
+				},
+				"Contractors": {
+					"type": "string",
+					"description": ""
+				},
+				"BidItems": {
+					"type": "string",
+					"description": ""
+				},
+				"Version": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"SpritePage": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DesignatedTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"ObservationType": {
+					"type": "string",
+					"description": ""
+				},
+				"UserLatitude": {
+					"type": "string",
+					"description": ""
+				},
+				"UserLongitude": {
+					"type": "string",
+					"description": ""
+				},
+				"AlignmentStation": {
+					"type": "string",
+					"description": ""
+				},
+				"AlignmentOffset": {
+					"type": "string",
+					"description": ""
+				},
+				"SnapshotJSON": {
+					"type": "string",
+					"description": ""
+				},
+				"AppHash": {
+					"type": "string",
+					"description": ""
+				},
+				"Locked": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Transcoded": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				},
+				"StateName": {
+					"type": "string",
+					"description": ""
+				},
+				"StateStep": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"LineItems": {
+					"type": "string",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"Equipment": {
+					"type": "string",
+					"description": ""
+				},
+				"ExternalSyncGUID": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDObservationArchive",
+				"GUIDObservationArchive",
+				"IDObservation",
+				"GUIDObservation",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Description",
+				"IDDevice",
+				"CaptureLatitude",
+				"CaptureLongitude",
+				"IDProject",
+				"Priority",
+				"Tags",
+				"Contractors",
+				"BidItems",
+				"Version",
+				"SpritePage",
+				"DesignatedTime",
+				"ObservationType",
+				"UserLatitude",
+				"UserLongitude",
+				"AlignmentStation",
+				"AlignmentOffset",
+				"SnapshotJSON",
+				"AppHash",
+				"Locked",
+				"Transcoded",
+				"Status",
+				"StateName",
+				"StateStep",
+				"LineItems",
+				"ExternalSyncDate",
+				"Equipment",
+				"ExternalSyncGUID"
+			]
+		},
+		"MappedArrayArtifact": {
+			"description": "",
+			"properties": {},
+			"type": "object"
+		},
+		"Bundles.ContentManagement.ObservationModel": {
+			"description": "",
+			"properties": {
+				"_StatusOverride": {
+					"type": "boolean",
+					"description": ""
+				},
+				"Labels": {
+					"type": "object",
+					"properties": {
+						"SAVE": {
+							"type": "boolean",
+							"description": ""
+						}
+					},
+					"description": ""
+				},
+				"Details": {
+					"$ref": "#/definitions/MappedArrayArtifact"
+				},
+				"Statistics": {
+					"type": "object",
+					"description": ""
+				},
+				"IDObservation": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDObservation": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"IDDevice": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"CaptureLatitude": {
+					"type": "string",
+					"description": ""
+				},
+				"CaptureLongitude": {
+					"type": "string",
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Priority": {
+					"type": "string",
+					"description": ""
+				},
+				"Version": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"SpritePage": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DesignatedTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"ObservationType": {
+					"type": "string",
+					"description": ""
+				},
+				"UserLatitude": {
+					"type": "string",
+					"description": ""
+				},
+				"UserLongitude": {
+					"type": "string",
+					"description": ""
+				},
+				"AlignmentStation": {
+					"type": "string",
+					"description": ""
+				},
+				"AlignmentOffset": {
+					"type": "string",
+					"description": ""
+				},
+				"AppHash": {
+					"type": "string",
+					"description": ""
+				},
+				"Locked": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Transcoded": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				},
+				"StateName": {
+					"type": "string",
+					"description": ""
+				},
+				"StateStep": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"ExternalSyncGUID": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"_StatusOverride",
+				"Labels",
+				"Details",
+				"Statistics",
+				"IDObservation",
+				"GUIDObservation",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Description",
+				"IDDevice",
+				"CaptureLatitude",
+				"CaptureLongitude",
+				"IDProject",
+				"Priority",
+				"Version",
+				"SpritePage",
+				"DesignatedTime",
+				"ObservationType",
+				"UserLatitude",
+				"UserLongitude",
+				"AlignmentStation",
+				"AlignmentOffset",
+				"AppHash",
+				"Locked",
+				"Transcoded",
+				"Status",
+				"StateName",
+				"StateStep",
+				"ExternalSyncDate",
+				"ExternalSyncGUID"
+			]
+		},
+		"ObservationCloneRequest": {
+			"description": "",
+			"properties": {
+				"IDObservations": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"format": "double"
+					},
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"OffsetFromSpecificTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"OffsetFromCurrentTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDObservations",
+				"IDProject",
+				"OffsetFromSpecificTime",
+				"OffsetFromCurrentTime"
+			]
+		},
+		"ObservationFilterRequest": {
+			"description": "",
+			"properties": {
+				"SearchText": {
+					"type": "string",
+					"description": ""
+				},
+				"Priority": {
+					"type": "object",
+					"properties": {
+						"Compare": {
+							"type": "string",
+							"description": ""
+						},
+						"Value": {
+							"type": "number",
+							"format": "double",
+							"description": ""
+						}
+					},
+					"description": ""
+				},
+				"ObservationType": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"Contractors": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"DesignatedTime": {
+					"type": "object",
+					"properties": {
+						"From": {
+							"type": "string",
+							"format": "date-time",
+							"description": ""
+						},
+						"To": {
+							"type": "string",
+							"format": "date-time",
+							"description": ""
+						}
+					},
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DocumentCount": {
+					"type": "object",
+					"properties": {
+						"Compare": {
+							"type": "string",
+							"description": ""
+						},
+						"Value": {
+							"type": "number",
+							"format": "double",
+							"description": ""
+						}
+					},
+					"description": ""
+				},
+				"IDArtifact": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"format": "double"
+					},
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"SearchText",
+				"Priority",
+				"ObservationType",
+				"Contractors",
+				"DesignatedTime",
+				"IDProject",
+				"DocumentCount",
+				"IDArtifact"
+			]
+		},
+		"ObservationModel": {
+			"description": "",
+			"properties": {
+				"_StatusOverride": {
+					"type": "boolean",
+					"description": ""
+				},
+				"Labels": {
+					"type": "object",
+					"properties": {
+						"SAVE": {
+							"type": "boolean",
+							"description": ""
+						}
+					},
+					"description": ""
+				},
+				"Details": {
+					"$ref": "#/definitions/MappedArrayArtifact"
+				},
+				"Statistics": {
+					"type": "object",
+					"description": ""
+				},
+				"IDObservation": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDObservation": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"IDDevice": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"CaptureLatitude": {
+					"type": "string",
+					"description": ""
+				},
+				"CaptureLongitude": {
+					"type": "string",
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Priority": {
+					"type": "string",
+					"description": ""
+				},
+				"Version": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"SpritePage": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DesignatedTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"ObservationType": {
+					"type": "string",
+					"description": ""
+				},
+				"UserLatitude": {
+					"type": "string",
+					"description": ""
+				},
+				"UserLongitude": {
+					"type": "string",
+					"description": ""
+				},
+				"AlignmentStation": {
+					"type": "string",
+					"description": ""
+				},
+				"AlignmentOffset": {
+					"type": "string",
+					"description": ""
+				},
+				"AppHash": {
+					"type": "string",
+					"description": ""
+				},
+				"Locked": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Transcoded": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				},
+				"StateName": {
+					"type": "string",
+					"description": ""
+				},
+				"StateStep": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"ExternalSyncGUID": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"_StatusOverride",
+				"Labels",
+				"Details",
+				"Statistics",
+				"IDObservation",
+				"GUIDObservation",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Description",
+				"IDDevice",
+				"CaptureLatitude",
+				"CaptureLongitude",
+				"IDProject",
+				"Priority",
+				"Version",
+				"SpritePage",
+				"DesignatedTime",
+				"ObservationType",
+				"UserLatitude",
+				"UserLongitude",
+				"AlignmentStation",
+				"AlignmentOffset",
+				"AppHash",
+				"Locked",
+				"Transcoded",
+				"Status",
+				"StateName",
+				"StateStep",
+				"ExternalSyncDate",
+				"ExternalSyncGUID"
+			]
+		},
+		"PayItemModel": {
+			"description": "",
+			"properties": {
+				"Extended": {
+					"type": "object",
+					"description": ""
+				},
+				"IDPayItem": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDPayItem": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"Units": {
+					"type": "string",
+					"description": ""
+				},
+				"Amount": {
+					"type": "string",
+					"description": ""
+				},
+				"ExtendedJSON": {
+					"type": "string",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"Extended",
+				"IDPayItem",
+				"GUIDPayItem",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Description",
+				"Units",
+				"Amount",
+				"ExtendedJSON",
+				"IDCustomer",
+				"ExternalSyncDate"
+			]
+		},
+		"Equipment": {
+			"description": "",
+			"properties": {
+				"IDEquipment": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDEquipment": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"Notes": {
+					"type": "string",
+					"description": ""
+				},
+				"SpecificationYear": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Code": {
+					"type": "string",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDEquipment",
+				"GUIDEquipment",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"ExternalSyncDate",
+				"IDCustomer",
+				"Name",
+				"Description",
+				"Notes",
+				"SpecificationYear",
+				"Code",
+				"Status"
+			]
+		},
+		"ReportNamedInstanceModel": {
+			"description": "",
+			"properties": {
+				"Archetype": {
+					"type": "string",
+					"description": ""
+				},
+				"Options": {
+					"type": "object",
+					"description": ""
+				},
+				"IDReportNamedInstance": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDReportNamedInstance": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Hash": {
+					"type": "string",
+					"description": ""
+				},
+				"OptionsJSON": {
+					"type": "string",
+					"description": ""
+				},
+				"IDReportArchetype": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"Archetype",
+				"Options",
+				"IDReportNamedInstance",
+				"GUIDReportNamedInstance",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Hash",
+				"OptionsJSON",
+				"IDReportArchetype",
+				"IDCustomer"
+			]
+		},
+		"ReportModel": {
+			"description": "",
+			"properties": {
+				"Options": {
+					"type": "object",
+					"description": ""
+				},
+				"IDReportArchetype": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDReportArchetype": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Archetype": {
+					"type": "string",
+					"description": ""
+				},
+				"OptionsJSON": {
+					"type": "string",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"Options",
+				"IDReportArchetype",
+				"GUIDReportArchetype",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Archetype",
+				"OptionsJSON",
+				"IDCustomer"
+			]
+		},
+		"SendToEmailRequest": {
+			"description": "",
+			"properties": {
+				"IDDocument": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"EmailAddressList": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": ""
+				},
+				"Subject": {
+					"type": "string",
+					"description": ""
+				},
+				"Message": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDDocument",
+				"EmailAddressList",
+				"Subject",
+				"Message"
+			]
+		},
+		"ElectronicSignature": {
+			"description": "",
+			"properties": {
+				"IDElectronicSignature": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDElectronicSignature": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Signer": {
+					"type": "string",
+					"description": ""
+				},
+				"IDContact": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"SignatureType": {
+					"type": "string",
+					"description": ""
+				},
+				"IDArtifact": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Approved": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDElectronicSignature",
+				"GUIDElectronicSignature",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Signer",
+				"IDContact",
+				"SignatureType",
+				"IDArtifact",
+				"Approved"
+			]
+		},
+		"DocumentModel": {
+			"description": "",
+			"properties": {
+				"Observations": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"format": "double"
+					},
+					"description": ""
+				},
+				"Comments": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"format": "double"
+					},
+					"description": ""
+				},
+				"ElectronicSignatures": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/ElectronicSignature"
+					},
+					"description": ""
+				},
+				"IDDocument": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDDocument": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"DocumentType": {
+					"type": "string",
+					"description": ""
+				},
+				"DocumentDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				},
+				"Version": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDProject": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"IDDevice": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"AppHash": {
+					"type": "string",
+					"description": ""
+				},
+				"Timezone": {
+					"type": "string",
+					"description": ""
+				},
+				"Shift": {
+					"type": "string",
+					"description": ""
+				},
+				"StateName": {
+					"type": "string",
+					"description": ""
+				},
+				"StateStep": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Locked": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"SequenceNumber": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncGUID": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"Observations",
+				"Comments",
+				"ElectronicSignatures",
+				"IDDocument",
+				"GUIDDocument",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"DocumentType",
+				"DocumentDate",
+				"Status",
+				"Version",
+				"IDProject",
+				"Description",
+				"IDDevice",
+				"AppHash",
+				"Timezone",
+				"Shift",
+				"StateName",
+				"StateStep",
+				"Locked",
+				"ExternalSyncDate",
+				"SequenceNumber",
+				"ExternalSyncGUID"
+			]
+		},
+		"Customer": {
+			"description": "",
+			"properties": {
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDCustomer": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Code": {
+					"type": "string",
+					"description": ""
+				},
+				"Enabled": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"CustomProperties": {
+					"type": "string",
+					"description": ""
+				},
+				"Timezone": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDCustomer",
+				"GUIDCustomer",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Code",
+				"Enabled",
+				"CustomProperties",
+				"Timezone"
+			]
+		},
+		"Contract": {
+			"description": "",
+			"properties": {
+				"IDContract": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDContract": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"Description": {
+					"type": "string",
+					"description": ""
+				},
+				"IDOrganization": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"PrimaryProjectNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"CountyProjectNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"StateProjectNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"FederalProjectNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"Status": {
+					"type": "string",
+					"description": ""
+				},
+				"DBEStructure": {
+					"type": "string",
+					"description": ""
+				},
+				"RouteNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"HighwayNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"PavingMaterial": {
+					"type": "string",
+					"description": ""
+				},
+				"StationBegin": {
+					"type": "string",
+					"description": ""
+				},
+				"TerminusBegin": {
+					"type": "string",
+					"description": ""
+				},
+				"TerminusEnd": {
+					"type": "string",
+					"description": ""
+				},
+				"StationEnd": {
+					"type": "string",
+					"description": ""
+				},
+				"TotalBidAmount": {
+					"type": "string",
+					"description": ""
+				},
+				"NetChangeOrderAmount": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDContract",
+				"GUIDContract",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"Description",
+				"IDOrganization",
+				"IDCustomer",
+				"ExternalSyncDate",
+				"PrimaryProjectNumber",
+				"CountyProjectNumber",
+				"StateProjectNumber",
+				"FederalProjectNumber",
+				"Status",
+				"DBEStructure",
+				"RouteNumber",
+				"HighwayNumber",
+				"PavingMaterial",
+				"StationBegin",
+				"TerminusBegin",
+				"TerminusEnd",
+				"StationEnd",
+				"TotalBidAmount",
+				"NetChangeOrderAmount"
+			]
+		},
+		"Organization": {
+			"description": "",
+			"properties": {
+				"IDOrganization": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"GUIDOrganization": {
+					"type": "string",
+					"description": ""
+				},
+				"CreateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"CreatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"UpdateDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"UpdatingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Deleted": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"DeleteDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"DeletingIDUser": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Name": {
+					"type": "string",
+					"description": ""
+				},
+				"DisadvantagedBusiness": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"Address": {
+					"type": "string",
+					"description": ""
+				},
+				"City": {
+					"type": "string",
+					"description": ""
+				},
+				"State": {
+					"type": "string",
+					"description": ""
+				},
+				"Zip": {
+					"type": "string",
+					"description": ""
+				},
+				"Phone": {
+					"type": "string",
+					"description": ""
+				},
+				"Approved": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"IDCustomer": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"ExternalSyncDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"Email": {
+					"type": "string",
+					"description": ""
+				},
+				"Type": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"IDOrganization",
+				"GUIDOrganization",
+				"CreateDate",
+				"CreatingIDUser",
+				"UpdateDate",
+				"UpdatingIDUser",
+				"Deleted",
+				"DeleteDate",
+				"DeletingIDUser",
+				"Name",
+				"DisadvantagedBusiness",
+				"Address",
+				"City",
+				"State",
+				"Zip",
+				"Phone",
+				"Approved",
+				"IDCustomer",
+				"ExternalSyncDate",
+				"Email",
+				"Type"
+			]
+		}
+	},
+	"info": {
+		"description": "Pavia Headlight API Server",
+		"license": {
+			"name": "All Rights Reserved"
+		},
+		"title": "HeadlightAPI",
+		"version": "0.0.12"
+	},
+	"paths": {
+		"/Authenticate": {
+			"post": {
+				"operationId": "authenticate",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Forward authentication request to authentication microservice.",
+				"tags": [
+					"Authenticate"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/LoginRequest"
+						}
+					}
+				]
+			}
+		},
+		"/Authenticate/Impersonate/{IDUser}": {
+			"get": {
+				"operationId": "_impersonateUser",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Authenticate"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "IDUser",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/BatchExport": {
+			"post": {
+				"operationId": "batchExport",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Begin Batch Export Job",
+				"tags": [
+					"BatchExport"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": []
+			}
+		},
+		"/BatchExport/Files/{ExportType}": {
+			"get": {
+				"operationId": "batchExportListFiles",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "List export files that are ready for download",
+				"tags": [
+					"BatchExport"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "ExportType",
+						"required": true,
+						"type": "string"
+					}
+				]
+			}
+		},
+		"/BidItem": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/BidItem"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"BidItem"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/BidItem"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/BidItem"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"BidItem"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/BidItem"
+						}
+					}
+				]
+			}
+		},
+		"/BidItem/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/BidItem"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"BidItem"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"BidItem"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/BidItems/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"BidItem"
+				],
+				"parameters": []
+			}
+		},
+		"/BidItems/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/BidItem"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"BidItem"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/BidItems/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/BidItem"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"BidItem"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/CheckoutSessionToken": {
+			"get": {
+				"operationId": "checkoutSessionToken",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Check out temporary authentication token for user in session.",
+				"tags": [
+					"Authenticate"
+				],
+				"parameters": []
+			}
+		},
+		"/Comment": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/CommentModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Comment"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/CommentModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/CommentModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Comment"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/CommentModel"
+						}
+					}
+				]
+			}
+		},
+		"/Comment/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/CommentModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Comment"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Comment"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Comments/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Comment"
+				],
+				"parameters": []
+			}
+		},
+		"/Comments/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/CommentModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Comment"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Comments/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/CommentModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Comment"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Contract": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Contract"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Contract"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Contract"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Contract"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Contract"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Contract"
+						}
+					}
+				]
+			}
+		},
+		"/Contract/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Contract"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Contract"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Contract"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Contracts/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Contract"
+				],
+				"parameters": []
+			}
+		},
+		"/Contracts/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Contract"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Contract"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Contracts/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Contract"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Contract"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Customer": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Customer"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Customer"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Customer"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Customer"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Customer"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Customer"
+						}
+					}
+				]
+			}
+		},
+		"/Customer/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Customer"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Customer"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Customer"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Customers/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Customer"
+				],
+				"parameters": []
+			}
+		},
+		"/Customers/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Customer"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Customer"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Customers/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Customer"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Customer"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/DocumentModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Document"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/DocumentModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/DocumentModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Document"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/DocumentModel"
+						}
+					}
+				]
+			}
+		},
+		"/Document/Sign/{IDDocument}/{IDElectronicSignature}": {
+			"get": {
+				"operationId": "signDocument",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Attach an ElectronicSignature to a Document",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDElectronicSignature",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/Undelete/{IDDocument}": {
+			"get": {
+				"operationId": "undeleteDocument",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "UNDelete a specific Document",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/UpdateExternalSyncDate": {
+			"post": {
+				"operationId": "updateDocumentExternalSyncDate",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Update Document ExternalSyncDate field",
+				"tags": [
+					"Document"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": []
+			}
+		},
+		"/Document/{IDDocument}/AddObservation/{IDObservation}": {
+			"get": {
+				"operationId": "addDocumentObservation",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{IDDocument}/Comment/Add/{IDComment}": {
+			"get": {
+				"operationId": "addCommentsToDocument",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDComment",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{IDDocument}/DCR.html": {
+			"get": {
+				"operationId": "getDocumentHTML",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Generate a DCR in HTML format",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{IDDocument}/DCR.json": {
+			"get": {
+				"operationId": "getDocumentJSON",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Generate a DCR in JSON format",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{IDDocument}/DCR.pdf": {
+			"get": {
+				"operationId": "getDocumentPDF",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Generate a DCR in PDF format",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{IDDocument}/RemoveObservation/{IDObservation}": {
+			"get": {
+				"operationId": "removeDocumentObservation",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{IDDocument}/ReportParameters": {
+			"get": {
+				"operationId": "getDocumentReportParameters",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Get Report Parameters that being sent to the report service",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{IDDocument}/SequenceNumber/Monthly": {
+			"get": {
+				"operationId": "getDocumentCountBySequenceNumber",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Get Document count form beginning of month in Customer timezone UP TO target DocumentID",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Document/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/DocumentModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/DocumentApproval": {
+			"post": {
+				"operationId": "postChangeDocumenttState",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Perform Approval state transition action against Document",
+				"tags": [
+					"DocumentApproval"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": []
+			}
+		},
+		"/DocumentApproval/{IDDocument}/ApproverList": {
+			"get": {
+				"operationId": "getDocumentApproverList",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Get list of Approvers for Document",
+				"tags": [
+					"DocumentApproval"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/DocumentApproval/{IDDocument}/State": {
+			"get": {
+				"operationId": "getDocumentState",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Get current Approval state of Document, and available actions for respective user as it relates to that state",
+				"tags": [
+					"DocumentApproval"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/DocumentSendTo/{IDDocument}/Email": {
+			"post": {
+				"operationId": "postDocumentSendToEmail",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"DocumentSendTo"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/SendToEmailRequest"
+						}
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Documents/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Document"
+				],
+				"parameters": []
+			}
+		},
+		"/Documents/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/DocumentModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Documents/{SynchronizeFromDate}/{Begin}/{Cap}": {
+			"post": {
+				"operationId": "syncDocuments",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Sync Documents\n\nProcess (since this is so complex):\n1. FOR EACH Document\n    1.1 Archive the Document\n    1.2 Merge in the Changes\n    1.5 After all Detail records are successfully stored, Update Document so Document.definition contains the serialized array of Details\n2. Get all Document records for this user that have changed since the sync date",
+				"tags": [
+					"Documents"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "FROM date (descending)",
+						"in": "path",
+						"name": "SynchronizeFromDate",
+						"required": true,
+						"type": "string",
+						"format": "date-time"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"get": {
+				"operationId": "getUpdatedDocuments",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Documents"
+				],
+				"parameters": [
+					{
+						"description": "FROM date (descending)",
+						"in": "path",
+						"name": "SynchronizeFromDate",
+						"required": true,
+						"type": "string",
+						"format": "date-time"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Documents/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/DocumentModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Document"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/DocumentsByObservation/{IDObservation}": {
+			"get": {
+				"operationId": "getDocumentByObservation",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"DocumentsByObservation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ElectronicSignature": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ElectronicSignatureModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"ElectronicSignature"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ElectronicSignatureModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ElectronicSignatureModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"ElectronicSignature"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ElectronicSignatureModel"
+						}
+					}
+				]
+			}
+		},
+		"/ElectronicSignature/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ElectronicSignatureModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"ElectronicSignature"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"ElectronicSignature"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ElectronicSignatures/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"ElectronicSignature"
+				],
+				"parameters": []
+			}
+		},
+		"/ElectronicSignatures/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ElectronicSignatureModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"ElectronicSignature"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ElectronicSignatures/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ElectronicSignatureModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"ElectronicSignature"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Equipment": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Equipment"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Equipment"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Equipment"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Equipment"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Equipment"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Equipment"
+						}
+					}
+				]
+			}
+		},
+		"/Equipment/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Equipment"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Equipment"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Equipment"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Equipments/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Equipment"
+				],
+				"parameters": []
+			}
+		},
+		"/Equipments/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Equipment"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Equipment"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Equipments/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Equipment"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Equipment"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/LineItem": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/LineItem"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"LineItem"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/LineItem"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/LineItem"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"LineItem"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/LineItem"
+						}
+					}
+				]
+			}
+		},
+		"/LineItem/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/LineItem"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"LineItem"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"LineItem"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/LineItems/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"LineItem"
+				],
+				"parameters": []
+			}
+		},
+		"/LineItems/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/LineItem"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"LineItem"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/LineItems/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/LineItem"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"LineItem"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Module": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ModuleModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Module"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ModuleModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ModuleModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Module"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ModuleModel"
+						}
+					}
+				]
+			}
+		},
+		"/Module/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ModuleModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Module"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Module"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Modules/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Module"
+				],
+				"parameters": []
+			}
+		},
+		"/Modules/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ModuleModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Module"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Modules/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ModuleModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Module"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Notification": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Notification"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Notification"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Notification"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Notification"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Notification"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Notification"
+						}
+					}
+				]
+			}
+		},
+		"/Notification/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Notification"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Notification"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Notification"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Notifications/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Notification"
+				],
+				"parameters": []
+			}
+		},
+		"/Notifications/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Notification"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Notification"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Notifications/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Notification"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Notification"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observation": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ObservationModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Observation"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ObservationModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ObservationModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Observation"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ObservationModel"
+						}
+					}
+				]
+			}
+		},
+		"/Observation/ImageHash/{Size}/V/{Version}": {
+			"get": {
+				"operationId": "getObservationImageHash",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Get Observation Image Hash\n- Get time on observation media item from mongo.",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "e.g. Thumbnail,Standard,Preview,Enhanced",
+						"in": "path",
+						"name": "Size",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "",
+						"in": "path",
+						"name": "Version",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observation/Project/{IDProject}/Sprites/{SpritePageNumber}": {
+			"get": {
+				"operationId": "downloadObservationCollectionImage",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "SpritePageNumber",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observation/Undelete/{IDObservation}": {
+			"get": {
+				"operationId": "undeleteObservation",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "UNDelete a specific observation",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observation/{IDObservation}/Clone": {
+			"post": {
+				"operationId": "postCloneObservation",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Cloned observation",
+						"schema": {
+							"$ref": "#/definitions/Bundles.ContentManagement.ObservationModel"
+						}
+					},
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "postCloneObservation API",
+				"tags": [
+					"Observation"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observation/{IDObservation}/Image/{Size}": {
+			"get": {
+				"operationId": "downloadObservationImage",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Download Observation Image\n- Get transcoded media file for an observation. If not found, asks transcoder to regenerate it",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observation/{IDObservation}/TranscodeTouch": {
+			"get": {
+				"operationId": "transcodeTouchObservation",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Touch Observation record UpdateDate and set Transcoded flag\n- When media files are updated, we want other devices to see the changes and pull it down",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observation/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ObservationModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationCloneTemplates/{IDProject}": {
+			"get": {
+				"operationId": "getCloneTemplates",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"ObservationCloneTemplates"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationSearchRebuild": {
+			"get": {
+				"operationId": "beginObservationSearchRebuild",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Delete and rebuild entire Observation search index (solr)",
+				"tags": [
+					"Observation"
+				],
+				"parameters": []
+			}
+		},
+		"/ObservationSearchSyncByDay/{SynchronizeByDay}": {
+			"get": {
+				"operationId": "beginIndexByDay",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Index all Observations for a single day (solr)",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "SynchronizeByDay",
+						"required": true,
+						"type": "string",
+						"format": "date"
+					}
+				]
+			}
+		},
+		"/ObservationSearchSyncByID/{IDObservation}": {
+			"get": {
+				"operationId": "pushObservationSearchIndexByIDs",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Index specific Observations (solr)",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationSearchSyncByProject/{IDProject}": {
+			"get": {
+				"operationId": "beginIndexByProject",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Index all Observations for a single project (solr)",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationSearchs/Count/{IDProject}/{SearchQuery}": {
+			"get": {
+				"operationId": "getObservationSearchCount",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Search Observations using search index (solr)",
+				"tags": [
+					"ObservationSearchs"
+				],
+				"parameters": [
+					{
+						"description": "solr search query",
+						"in": "path",
+						"name": "SearchQuery",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationSearchs/{IDProject}/{SearchQuery}/{Begin}/{Cap}": {
+			"get": {
+				"operationId": "getObservationSearch",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Search Observations using search index (solr)",
+				"tags": [
+					"ObservationSearchs"
+				],
+				"parameters": [
+					{
+						"description": "solr search query",
+						"in": "path",
+						"name": "SearchQuery",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationSendTo/Email": {
+			"post": {
+				"operationId": "postObservationSendToEmail",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"ObservationSendTo"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": []
+			}
+		},
+		"/ObservationSendTo/{IDObservation}/Email/{EmailAddress}": {
+			"get": {
+				"operationId": "getObservationSendToEmail",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"ObservationSendTo"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "EmailAddress",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDObservation",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observations/Clone": {
+			"post": {
+				"operationId": "postCloneBulkObservations",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Cloned observations",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Bundles.ContentManagement.ObservationModel"
+							}
+						}
+					},
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "postCloneBulkObservations API",
+				"tags": [
+					"Observation"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ObservationCloneRequest"
+						}
+					}
+				]
+			}
+		},
+		"/Observations/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Observation"
+				],
+				"parameters": []
+			}
+		},
+		"/Observations/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ObservationModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observations/Sync/{SynchronizeFromDate}/{Begin}/{Cap}": {
+			"post": {
+				"operationId": "syncObservations",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Sync Observations\n\nProcess (since this is so complex):\n1. FOR EACH OBSERVATION\n    1.1 Archive the Observation\n    1.2 Merge in the Changes\n    1.3 Translate the Observation Details\n    1.4 PERFORM SYNC MATCH AND UPDATE WHERE NECESSARY (TALK TO TRENT)\n    1.5 After all Detail records are successfully stored, Update Observation so Observation.definition contains the serialized array of Details\n2. Get all observation records for this user that have changed since the sync date",
+				"tags": [
+					"Observation"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "SynchronizeFromDate",
+						"required": true,
+						"type": "string",
+						"format": "date-time"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"get": {
+				"operationId": "getUpdatedObservations",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Cloned observations",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Bundles.ContentManagement.ObservationModel"
+							}
+						}
+					},
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "SynchronizeFromDate",
+						"required": true,
+						"type": "string",
+						"format": "date-time"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Observations/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ObservationModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Observation"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationsBatchTag/Add": {
+			"post": {
+				"operationId": "postObservationsBatchTagAdd",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Add a tag to a set of Observations (by ID)",
+				"tags": [
+					"Observation",
+					"ObservationsBatchTag"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": []
+			}
+		},
+		"/ObservationsBatchTag/Remove": {
+			"post": {
+				"operationId": "postObservationsBatchTagRemove",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Remove a tag to a set of Observations (by ID)",
+				"tags": [
+					"Observation",
+					"ObservationsBatchTag"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": []
+			}
+		},
+		"/ObservationsByDocument/{IDDocument}/{Begin}/{Cap}": {
+			"get": {
+				"operationId": "getObservationsByDocument",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Find all observations associated to a document.",
+				"tags": [
+					"ObservationsByDocument"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDDocument",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationsByNoDocument/{IDProject}/{Cap}": {
+			"get": {
+				"operationId": "getObservationsByNoDocument",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Find observations NOT associated to any documents.",
+				"tags": [
+					"ObservationsByDocument"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationsByUpdateDate/{ByDate}/{Cap}": {
+			"get": {
+				"operationId": "getObservationsByUpdateDate",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Fetch list of observations where date is earlier than ByDate.",
+				"tags": [
+					"ObservationsByUpdateDate"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "ByDate",
+						"required": true,
+						"type": "string",
+						"format": "date-time"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ObservationsFilter/Count": {
+			"post": {
+				"operationId": "getObservationsFilterCount",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Search Observations using search index (solr)",
+				"tags": [
+					"ObservationsFilter"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ObservationFilterRequest"
+						}
+					}
+				]
+			}
+		},
+		"/ObservationsFilter/{Begin}/{Cap}": {
+			"post": {
+				"operationId": "getObservationsFilter",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Search Observations using search index (solr)",
+				"tags": [
+					"ObservationsFilter"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ObservationFilterRequest"
+						}
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Organization": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Organization"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Organization"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Organization"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Organization"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Organization"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Organization"
+						}
+					}
+				]
+			}
+		},
+		"/Organization/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/Organization"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Organization"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Organization"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Organizations/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Organization"
+				],
+				"parameters": []
+			}
+		},
+		"/Organizations/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Organization"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Organization"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Organizations/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Organization"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Organization"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/PayItem": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/PayItemModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"PayItem"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/PayItemModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/PayItemModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"PayItem"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/PayItemModel"
+						}
+					}
+				]
+			}
+		},
+		"/PayItem/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/PayItemModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"PayItem"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"PayItem"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/PayItems/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"PayItem"
+				],
+				"parameters": []
+			}
+		},
+		"/PayItems/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/PayItemModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"PayItem"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/PayItems/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/PayItemModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"PayItem"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Project": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ProjectModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Project"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ProjectModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ProjectModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Project"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ProjectModel"
+						}
+					}
+				]
+			}
+		},
+		"/Project/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ProjectModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Project"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Project"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Projects/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Project"
+				],
+				"parameters": []
+			}
+		},
+		"/Projects/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ProjectModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Project"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Projects/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ProjectModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Project"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Report": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ReportModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"Report"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ReportModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ReportModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"Report"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ReportModel"
+						}
+					}
+				]
+			}
+		},
+		"/Report/{ReportType}": {
+			"get": {
+				"operationId": "getDocumentRenderByType",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"Report"
+				],
+				"parameters": []
+			}
+		},
+		"/Report/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ReportModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"Report"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"Report"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ReportNamedInstance": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ReportNamedInstanceModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ReportNamedInstanceModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ReportNamedInstanceModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ReportNamedInstanceModel"
+						}
+					}
+				]
+			}
+		},
+		"/ReportNamedInstance/{IDReportNamedInstance}/AddToProject/{IDProject}": {
+			"get": {
+				"operationId": "addReportNamedInstanceToProject",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDReportNamedInstance",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ReportNamedInstance/{IDReportNamedInstance}/RemoveFromProject/{IDProject}": {
+			"get": {
+				"operationId": "removeReportNamedInstanceFromProject",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDReportNamedInstance",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ReportNamedInstance/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ReportNamedInstanceModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ReportNamedInstances/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": []
+			}
+		},
+		"/ReportNamedInstances/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ReportNamedInstanceModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ReportNamedInstances/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ReportNamedInstanceModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/ReportNamedInstancesByProject/{IDProject}/{Begin}/{Cap}": {
+			"get": {
+				"operationId": "getReportNamedInstanceByProject",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"tags": [
+					"ReportNamedInstance"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "IDProject",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "Begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "Cap",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Reports/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"Report"
+				],
+				"parameters": []
+			}
+		},
+		"/Reports/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ReportModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"Report"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Reports/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ReportModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"Report"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/User": {
+			"post": {
+				"operationId": "_update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/UserModel"
+						}
+					}
+				},
+				"description": "Meadow POST (Update)",
+				"tags": [
+					"User"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/UserModel"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "_create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/UserModel"
+						}
+					}
+				},
+				"description": "Meadow PUT (Create)",
+				"tags": [
+					"User"
+				],
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/UserModel"
+						}
+					}
+				]
+			}
+		},
+		"/User/{id}": {
+			"get": {
+				"operationId": "_read",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/UserModel"
+						}
+					}
+				},
+				"description": "Meadow READ",
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"description": "Meadow DELETE",
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"description": "ID of record",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Users/Count": {
+			"get": {
+				"operationId": "_count",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"Count": {
+									"type": "number",
+									"format": "double",
+									"description": ""
+								}
+							}
+						}
+					}
+				},
+				"description": "Meadow COUNT",
+				"tags": [
+					"User"
+				],
+				"parameters": []
+			}
+		},
+		"/Users/FilteredTo/{filter}/{begin}/{max}": {
+			"get": {
+				"operationId": "_readsFiltered",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/UserModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ filtered list",
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"description": "FBV meadow filter",
+						"in": "path",
+						"name": "filter",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		},
+		"/Users/{begin}/{max}": {
+			"get": {
+				"operationId": "_reads",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/UserModel"
+							}
+						}
+					}
+				},
+				"description": "Meadow READ list",
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"description": "Beginning (skip) number of records (to page)",
+						"in": "path",
+						"name": "begin",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"description": "Maximum number of records to return",
+						"in": "path",
+						"name": "max",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				]
+			}
+		}
+	},
+	"swagger": "2.0",
+	"securityDefinitions": {}
+}
