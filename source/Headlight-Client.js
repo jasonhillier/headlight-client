@@ -14,7 +14,7 @@ var libRequest = require('request');
 var tough = require('tough-cookie');
 var Cookie = tough.Cookie;
 const BUFFER_DIR = 'buffer/'; //prepare a buffer directory for operations that require file-on-disk
-const REQUEST_TIMEOUT = 60 * 1000; //60 seconds
+var REQUEST_TIMEOUT = 60 * 1000; //60 seconds
 const RETRY_DELAY = 1000; //1 second
 
 module.exports = class HeadlightClient
