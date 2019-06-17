@@ -15,6 +15,7 @@ var tough = require('tough-cookie');
 var Cookie = tough.Cookie;
 const BUFFER_DIR = 'buffer/'; //prepare a buffer directory for operations that require file-on-disk
 const REQUEST_TIMEOUT = 60 * 1000; //60 seconds
+const RETRY_DELAY = 1000; //1 second
 
 module.exports = class HeadlightClient
 {
@@ -26,6 +27,7 @@ module.exports = class HeadlightClient
         this._CommonServices = pFable;
         this._Log = pFable.log;
         this._Settings = pFable.settings;
+        this._RetryTimeDelay = 0;
         
         this.libEntities = require(__dirname + '/Headlight-Entities').new(pFable);
         this.libUtils = require(__dirname + '/Headlight-Utils').new(pFable);
@@ -537,15 +539,19 @@ module.exports = class HeadlightClient
         if (!pNoRetry &&
             (pError || pResponse.body.Error)) //TODO: check status code
         {
-            this._Log.warn('Headlight API error. Attempting to re-authenticate...', {Error: pError || pResponse.body.Error});
+            setTimeout(()=>{
+                this._RetryTimeDelay-=RETRY_DELAY; //decrement time delay when call starts. This will increase with the number of outstanding retry requests, preventing
+                                                    // compounding/flooding of requests.
+                this._Log.warn('Headlight API error. Attempting to re-authenticate...', {Error: pError || pResponse.body.Error});
 
-            this.login((err, response)=>
-            {
-                if (err)
-                    return fCallback("Failed to login to Headlight!");
+                this.login((err, response)=>
+                {
+                    if (err)
+                        return fCallback("Failed to login to Headlight!");
 
-                return fRetry();
-            });
+                    return fRetry();
+                });
+            },this._RetryTimeDelay+=RETRY_DELAY);
         }
         else
         {

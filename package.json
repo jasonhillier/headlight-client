@@ -1,6 +1,6 @@
 {
   "name": "headlight-client",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "",
   "main": "source/Headlight-Client.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "devDependencies": {
     "chai": "2.0.0",
     "codeclimate-test-reporter": "^0.1.0",
-    "fable": "^0.1.7",
+    "fable": "^1.0.1",
     "istanbul": "0.3.5",
     "mocha": "2.1.0"
   },
