@@ -156,7 +156,7 @@ module.exports = class HeadlightClient
             json: true,
             jar: this._CookieJar,
             body: pOptions.body ? pOptions.body : null,
-            timeout: REQUEST_TIMEOUT
+            timeout: pOptions.timeout!=null ? pOptions.timeout : REQUEST_TIMEOUT
             },  (err, pResponse)=>
             {
                 this.handleHeadlightResponse(err, pResponse, pNoRetry, ()=>

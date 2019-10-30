@@ -1,6 +1,6 @@
 {
   "name": "headlight-client",
-  "version": "2.0.6",
+  "version": "2.0.11",
   "description": "",
   "main": "source/Headlight-Client.js",
   "scripts": {
